@@ -8,4 +8,4 @@ roadmap and tick off some baseline learning, the goal is to utilize these new sk
 
 ## Jun 19, 2025
 Currently reviewing HTML, CSS and JS topics. The last time I touched web dev in general was some time in early 2024 for a hackathon (second place baby!!), so it's been a while
-and I need to catch up.
+and I need to catch up. Following along with the [html and css crash course by DesignCourse](https://www.youtube.com/watch?v=D-h8L5hgW-w) in the cssHtmlRefresher dir.
