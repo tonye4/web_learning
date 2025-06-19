@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --primary-color: #007AF3;
+}
+
+body {
+  background: #F2F2F2;
+  margin: 0;
+  font-family: 'Roboto';
+}
+
+.navbar {
+  background: white;
+  padding: 1em;
+
+  .logo {
+    text-decoration: none;
+    /* gets rid of line*/
+    font-weight: 700;
+    color: black;
+    font-size: 1.2em;
+
+    span {
+      color: var(--primary-color);
+    }
+
+  }
+
+  nav {
+    /* in mobile view, nav should be hidden, but shown during desktop view. */
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    place-content: space-between;
+  }
+
+  .mobile-menu {
+    /* makes cursor when we hover over the icon a 'hand' */
+    cursor: pointer;
+  }
+}
+
+a {
+  color: #444444;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 5em 2em;
+}
+
+.hero {
+  text-align: center;
+}
+
+.left-col {
+
+  .subhead {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: gray;
+    letter-spacing: .1em;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    /* Change line-height and margin-top to counter the default margins and line height*/
+    line-height: 1.3em;
+    margin-top: .2em;
+  }
+
+  .primary-cta {
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: .6em 1.3em;
+    font-size: 1.4em;
+    border-radius: 5em;
+    font-weight: bold;
+    display: inline-block;
+  }
+
+  .watch-video-cta {
+    display: block;
+    margin-top: 1em;
+
+    img {
+      margin-right: .5em;
+    }
+  }
+}
+
+.hero-img {
+  width: 70%;
+  margin-top: 3em;
+}
+
+/* section.features-section just tells you what element the class is coming from. features-section belongs to the section element */
+section.features-section {
+  background: #20272E;
+}
+
+ul.features-list {
+  margin: 0;
+  padding-left: .1em;
+  // come back in a sec.
+
+  li {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+    position: relative; // not quite sure what it does, but it helps show the checkmarks.
+
+    // pseudo selector to make the checkmarks
+    // &: is specific to scss. When transpiled to regular css -> li:before.
+    &:before {
+      content: '';
+      left: -2em;
+      position: absolute; // let's you position an element within a document.
+      width: 20px;
+      height: 20px;
+      background-image: url('../images/bullet.svg');
+      background-size: contain; // not too sure what it does but it fixes positioning?
+      margin-left: .5em;
+    }
+  }
+}
